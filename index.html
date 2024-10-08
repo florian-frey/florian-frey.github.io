@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florian Frey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -17,9 +19,38 @@
         h1 {
             color: #333;
         }
+        .links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .links li {
+            margin: 10px 0;
+        }
+        .links a {
+            text-decoration: none;
+            font-size: 2em;
+            color: #333;
+            transition: color 0.5s ease, filter 0.5s ease;
+            filter: grayscale(100%);
+        }
+        .links a:hover {
+            filter: grayscale(0%);
+        }
+        .links #github:hover {
+            color: #171515;
+        }
+        .links #linkedin:hover {
+            color: #2967b0; 
+        }
     </style>
 </head>
 <body>
     <h1>Hello World!</h1>
+    <ul class="links">
+        <li><a href="https://www.linkedin.com/in/florian-frey" target="_blank" id="linkedin"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/florian-frey" target="_blank" id="github"><i class="fab fa-github"></i></a></li>
+    </ul>
 </body>
 </html>
